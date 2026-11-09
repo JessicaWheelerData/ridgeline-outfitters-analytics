@@ -1,0 +1,15 @@
+digraph RidgeLine {
+ graph [rankdir=LR, bgcolor="#F7F6F2", pad="0.4", nodesep="0.55", ranksep="1.0", splines=polyline, label="RidgeLine Outfitters | Silver-Layer Entity Relationship Diagram", labelloc=t, fontsize=22, fontname="Arial", fontcolor="#284638"];
+ node [shape=record, style="rounded,filled", fillcolor="white", color="#284638", penwidth=1.6, fontname="Arial", fontsize=12, margin="0.16,0.12"];
+ edge [color="#A66A43", penwidth=1.7, arrowsize=.7];
+ customers [label="{silver_customers|PK  CustomerID|FirstName, LastName|AcquisitionSource|LoyaltyMember}"];
+ products [label="{silver_products|PK  ProductID|ProductName|Category|UnitCost, UnitPrice}"];
+ warehouses [label="{silver_warehouses|PK  WarehouseID|WarehouseName|Region}"];
+ orders [label="{silver_orders|PK  OrderID|FK  CustomerID|FK  ProductID|FK  WarehouseID|OrderDate, Quantity|NetSales}",fillcolor="#EAF0EA"];
+ inventory [label="{silver_inventory|PK  InventoryID|FK  ProductID|FK  WarehouseID|QuantityOnHand|ReorderPoint}",fillcolor="#F6EDE7"];
+ customers -> orders [label="1 to many", fontsize=10];
+ products -> orders [label="1 to many", fontsize=10];
+ warehouses -> orders [label="1 to many", fontsize=10];
+ products -> inventory [label="1 to many", fontsize=10];
+ warehouses -> inventory [label="1 to many", fontsize=10];
+}
