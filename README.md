@@ -82,7 +82,7 @@ The headline sales, inventory and customer totals below were reconciled to live 
 - `docs/ARCHITECTURE.md` — architecture, lineage, assumptions and limitations
 - `docs/BUSINESS_FINDINGS.md` — findings, caveats, recommendations
 - `docs/SQL_REVIEW.md` — code review and safe execution notes
-- `dashboard/` — placeholder for the existing Power BI file and screenshots
+- `dashboard/` — Power BI report PDF and four dashboard preview images. The editable `.pbix` file is available in `powerbi/`.
 
 ## Data and metric definitions
 
@@ -108,6 +108,8 @@ This repository is **Portfolio Project 1**. [Project 2 — Demand Forecasting & 
 - [Data quality and validation decisions](docs/DATA_QUALITY_DECISIONS.md)
 - [Silver-layer logical ERD](docs/ERD.md) and [diagram image](docs/ERD.png)
 
-## Current handoff
+## Project deliverables
 
-The existing Power BI `.pbix` and four report screenshots have not been provided as files in this package. Place them in `dashboard/` before publishing. The source SQL is a documented portfolio extract, not a turnkey deployment.
+Portfolio Project 1 includes the four-page Power BI dashboard, editable PBIX file, PDF export, dashboard previews, Databricks SQL reference scripts, Silver-layer ERD, validation queries, and documented business recommendations.
+
+The live Gold-table totals have been reconciled with the dashboard. The SQL scripts document the transformations used but are not presented as a fully reproducible deployment pipeline.
